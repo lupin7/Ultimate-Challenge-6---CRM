@@ -1,0 +1,39 @@
+<div class="customers">
+  <% if display_link_to_edit %>
+    <blockquote><%= link_to 'edit', edit_customer_path(customer) %>  <%= link_to 'X', customer, method: :delete, data: { confirm: 'Are you sure?' } %></blockquote>
+  <% end %>
+
+  <h2>
+    <% if display_link_to_show %>
+      <%= link_to customer.full_name, customer %>
+    <% else %>
+      <%= customer.name %>
+    <% end %>
+  </h2>
+ 
+  
+  <% if customer.image.present? %>
+    <p class="index_img"><%= image_tag customer.image %></p>
+  <% end %>
+  
+
+  <p>
+    <strong>Phone: </strong><%= customer.phone_number %>
+  </p>
+  
+  <p>
+    <strong>Email: </strong> <%= customer.email %>
+  </p>
+
+  <p>
+    <strong>Notes: </strong> <%= customer.notes %>
+  </p>
+
+  <% if customer.province_id.present? %>
+    <p>
+      <strong>Province: </strong> <%= customer.province.name %>
+    </p>
+  <% else %>
+    <p> <strong>Province: </strong> None </p>
+  <% end %>
+</div>

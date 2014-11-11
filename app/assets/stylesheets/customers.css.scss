@@ -1,0 +1,40 @@
+// Place all the styles related to the Customers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+*{
+	font-family: Calibri;
+}
+
+.customers {
+	border: 1px solid black;
+	margin: 15px;
+	padding: 10px;
+	padding-bottom: 40px;
+	width: 250px;
+	box-shadow: 2px 2px 5px black;
+	font-size: 1.4em;	
+	display: inline-block;
+	background: white;
+	h2 a{
+		text-decoration: none;
+	}
+
+	img{
+		width: 100px;
+	}
+
+	blockquote {
+		float: right;
+		margin-top: -2px;
+		margin-right: -1px;
+		font-size: 0.80em;
+	}
+
+	p strong {
+		font-size: 1.4em;
+	}
+	p {
+		font-size: 0.8em;
+	}
+}
