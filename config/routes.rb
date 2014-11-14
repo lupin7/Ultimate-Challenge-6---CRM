@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   # resources :finder
   get '/finder' => 'finder#index', as: 'finder'
   get '/finder/missing_email' => 'finder#missing_email', as: 'finder/missing_email'
+  get '/finder/alphabetized' => 'finder#alphabetized', as: 'finder/alphabetized'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
